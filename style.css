@@ -1,0 +1,199 @@
+/* Prime Video-like dark theme CSS */
+:root {
+    --primary-bg: #141414;
+    --secondary-bg: #181818;
+    --accent-bg: #232323;
+    --card-bg: #222;
+    --primary-color: #ffffff;
+    --secondary-color: #b3b3b3;
+    --accent-color: #00a8e1;
+    --shadow: 0 2px 8px rgba(0,0,0,0.5);
+    --shadow-hover: 0 4px 16px rgba(0,168,225,0.2);
+    --scrollbar-bg: #181818;
+    --scrollbar-thumb: #333;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
+}
+
+header {
+    background: var(--secondary-bg);
+}
+
+.logo {
+    color: var(--accent-color);
+}
+
+nav a {
+    color: var(--primary-color);
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.main-banner {
+    background: linear-gradient(90deg, var(--secondary-bg) 60%, var(--accent-bg) 100%);
+}
+
+.main-banner p {
+    color: var(--secondary-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+}
+
+
+.movie-card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.movie-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.movie-card .movie-title {
+    color: var(--primary-color);
+    background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar {
+    background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+}
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background: #181818;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00a8e1;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #00a8e1;
+}
+
+.main-banner {
+    background: linear-gradient(90deg, #181818 60%, #232323 100%);
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+}
+
+.main-banner h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.main-banner p {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 2rem;
+    color: #fff;
+}
+
+.movie-row {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,168,225,0.2);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    height: 270px;
+    object-fit: cover;
+}
+
+.movie-card .movie-title {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #181818;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00a8e1;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .main-banner {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        min-height: 180px;
+    }
+    .section-title {
+        margin-left: 1rem;
+    }
+    .movie-row {
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+}
